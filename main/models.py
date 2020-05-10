@@ -5,3 +5,4 @@ class Match(models.Model):
 	location = models.CharField(max_length = 64)
 	sport = models.CharField(max_length = 64)
 	maxPlayers = models.IntegerField()
+	timeDate = models.DateTimeField()

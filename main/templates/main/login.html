@@ -1,0 +1,21 @@
+{% extends "main/layout.html" %}
+
+{% block title %}
+	Registration
+{% endblock %}
+
+{% block body %}
+
+<div class="row container">
+	<form method="POST">
+		{% csrf_token %}
+		{{form.as_p}}
+		<input class="btn" type="submit" name="Submit!">
+	</form>
+</div>
+
+<div class="row container">
+	If you don`t have an account!, <a href="/registration">Register </a> instead.
+</div>
+{% endblock %}
+

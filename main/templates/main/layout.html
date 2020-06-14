@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> <!--Materialize CSS!-->
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script><!--Materialize JS !-->
+	<link rel="stylesheet" type="text/css" href="{% static 'main/css/main.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!--ICONS!-->
+
+</head>
+<body>
+	<!-- Navbar !-->
+	{% include "main/includes/navbar.html" %}
+  	<!--Navbar Ends !-->
+
+<!-- Handle error and success Messages !-->
+	{% include "main/includes/messages.html " %}
+<!-- handle messages end !-->
+	{% block body %}
+	{% endblock %}
+</body>
+</html>

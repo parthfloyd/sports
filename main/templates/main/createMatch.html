@@ -1,0 +1,49 @@
+{% extends "main/layout.html" %}
+
+{% block title %}
+	Create Match
+{% endblock %}
+
+{% block body %}
+
+
+<!--Body content start !-->
+
+<div class="row container">
+	<center><h3 class="flow-text"> Enter your Match Details! </h3></center>
+	<form method="POST" class="col s12">
+		{% csrf_token %}
+	
+
+		<div class="input-field row col s12">
+		<label>{{form.location.label}}</label>
+		{{form.location}}
+		</div>
+
+		<div class="input-field row col s12">
+		<label>{{form.sport.label}}</label>
+		{{form.sport}}
+		</div>
+
+		<div class="input-field row col s12">
+		<label>{{form.maxPlayers.label}}</label>
+		{{form.maxPlayers}}
+		</div>
+
+		<div class="input-field row col s6 datepicker">
+		<h6 style="color:grey;"> Date of the Match:</h6>
+		{{form.date}}
+		</div>
+
+		<div class="input-field row col s6">
+		<h6 style="color:grey;"> Time of the Match :</h6>
+		{{form.time}}
+		</div>
+
+		<center><input class="btn" type="submit" name="Submit!"></center>
+	</form> 
+</div>
+
+
+{% endblock %}
+
